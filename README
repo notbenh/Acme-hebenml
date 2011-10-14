@@ -1,0 +1,49 @@
+Long story short https://metacpan.org/release/Shebangml
+
+!!! THIS IS A JOKE DO NOT USE ME EVER !!!
+
+  - html :
+      - head :
+          - title : this is a title
+          - link !type text/css !href http://someplace.com
+          - script !type text/javascript : |
+              alert('hello world');
+          - style : |
+              div#content{
+                color: #000;
+              }
+              .big {
+                font-size: 200%;
+              }
+              
+            
+      - body : 
+          - div #content :
+              - p .big : this is some content
+
+Should result in an output of: 
+
+  <html>
+    <head>
+      <title>this is a title</title>
+      <link type='text/css' href='http://someplace.com' />
+      <script type='text/javascript'>
+        alert('hello world');
+      </script>
+      <style>
+        div#content{
+          color: #000;
+        }
+        .big {
+          font-size: 200%;
+        }
+      </style>
+    </head>
+    <body>
+      <div id='content'>
+        <p class='big'>
+          this is some content
+        </p>
+      </div>
+    </body>
+  </html>
