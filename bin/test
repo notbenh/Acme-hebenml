@@ -1,8 +1,0 @@
-<html><head><title>this is a title</title><link://='someplace' /='css'  ='http' .='com'  !='href'></link><script/='javascript'  ='text'  !='type'>alert('hello world');
-</script><style>div#content{
-  color: #000;
-}
-.big {
-  font-size: 200%;
-}
-</style></head><body><div #='content'><p .='big'>this is some content</p></div></body></html>
