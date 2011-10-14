@@ -43,10 +43,14 @@ sub parse_doc {
       $out .= sprintf qq{\n%s%s}
                     , $indent
                     , sprintf( parse_tag($tag)
-                             , ref($content) ? parse_doc(qq{  $indent}, $content) 
-                                             : $content =~ m/\n/ ? do{ chomp $content; $content =~ s/\n/\n$indent  /gx; qq{\n$indent  $content\n} }
-                                                                 : qq{$content\n}
-                             , $indent
+                             , ref($content) ? (parse_doc(qq{  $indent}, $content), $indent)
+                                             : ($content =~ m/\n/ ? do{ chomp $content; 
+                                                                        $content =~ s/\n/\n$indent  /gx; 
+                                                                        qq{\n$indent  $content\n$indent} 
+                                                                      }
+                                                                  : qq{$content}
+                                               , '' 
+                                               )
                              )
                     ; 
     }
