@@ -2,6 +2,8 @@ Long story short https://metacpan.org/release/Shebangml
 
 !!! THIS IS A JOKE DO NOT USE ME EVER !!!
 
+[html.yaml]
+
   - html :
       - head :
           - title : this is a title
@@ -20,9 +22,12 @@ Long story short https://metacpan.org/release/Shebangml
       - body : 
           - div #content :
               - p .big : this is some content
-<<<<<<< HEAD
 
-Should result in an output of: 
+[translate]
+
+hebenml.pl html.yaml > output.html
+
+[output.html]
 
   <html>
     <head>
@@ -48,5 +53,3 @@ Should result in an output of:
       </div>
     </body>
   </html>
-=======
->>>>>>> 0b7f9f9c45d6878b1af7f066611232c825c9a06d
