@@ -1,0 +1,18 @@
+- html :
+    - head :
+        - title : this is a title
+        - link !type text/css !href http://someplace.com
+        - script !type text/javascript : |
+            alert('hello world');
+        - style : |
+            div#content{
+              color: #000;
+            }
+            .big {
+              font-size: 200%;
+            }
+            
+          
+    - body : 
+        - div #content :
+            - p .big : this is some content
